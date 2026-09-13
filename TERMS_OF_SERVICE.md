@@ -1,8 +1,8 @@
 # Hana Bot Terms of Service
 
-**Last updated:** 12 September 2026
+**Last updated:** 13 September 2026
 
-These Terms of Service ("Terms") govern the use of Hana ("Hana", "the Bot", "we", "us"), a Discord application that provides conversational AI, server utilities, voice text-to-speech, roleplay features, status updates, and optional mini-games.
+These Terms of Service ("Terms") govern the use of Hana ("Hana", "the Bot", "we", "us"), a private Discord application that provides conversational AI, server utilities, voice text-to-speech, roleplay features, status updates, and optional mini-games.
 
 ## 1. Acceptance
 
@@ -14,7 +14,7 @@ You must be old enough to use Discord under the laws that apply to you and must 
 
 ## 3. What Hana provides
 
-Hana may provide AI chat in channels specifically enabled by a server administrator, optional conversation memory, Discord status updates, text-to-speech in a voice channel chosen by a server administrator, roleplay interactions, and optional mini-games. Features may change, be unavailable, or be removed without notice.
+Hana may provide AI chat in channels specifically enabled by a server administrator, optional conversation memory, Discord status updates, text-to-speech in a voice channel chosen by a server administrator, roleplay interactions, and optional mini-games. The Bot is not a public release and may be installed only in servers authorized by its operator. Features may change, be unavailable, or be removed without notice.
 
 Hana's AI output is generated automatically. It can be incorrect, incomplete, inappropriate for a particular situation, or unavailable. Do not rely on Hana for medical, legal, financial, safety-critical, or other professional advice.
 
@@ -27,6 +27,8 @@ You may not use Hana to:
 - submit passwords, Discord tokens, payment information, or other highly sensitive personal information;
 - interfere with, reverse engineer, abuse, overload, or circumvent security controls of Hana, Discord, or its service providers; or
 - use the Bot's data or output to train models, profile people, or conduct spam or advertising.
+
+You may not attempt to invite, copy, redistribute, reverse engineer, or make Hana available to an unauthorized server or user. The operator may remove Hana from an unauthorized server without notice.
 
 We may limit, suspend, or end access to Hana when reasonably necessary to protect users, the service, or compliance with these Terms.
 
