@@ -40,7 +40,7 @@ These providers process information under their own terms and privacy practices.
 
 ## 5. Your controls
 
-`/settingai` is visible only to the caller. It lets users control local memory, cross-server sharing, reply mentions, timezone, voluntary personal profile, and deletion of memory/profile data. Deletion actions require confirmation. A server administrator can disable RoomAI or remove Hana from a server.
+`/settingai` is visible only to the caller. It lets users control local memory, cross-server sharing, reply mentions, timezone, voluntary personal profile, and deletion of memory/profile data. A user may also choose a memory record from an older server and move it to the current server after confirmation; the source record is deleted after a successful move. Deletion and move actions require confirmation. A server administrator can disable RoomAI or remove Hana from a server.
 
 ## 6. Security and changes
 
