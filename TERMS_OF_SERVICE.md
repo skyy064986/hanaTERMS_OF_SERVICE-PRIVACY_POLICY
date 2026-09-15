@@ -1,55 +1,47 @@
 # Hana Bot Terms of Service
 
-**Last updated:** 13 September 2026
+**Last updated:** 15 September 2026
 
-These Terms of Service ("Terms") govern the use of Hana ("Hana", "the Bot", "we", "us"), a private Discord application that provides conversational AI, server utilities, voice text-to-speech, roleplay features, status updates, and optional mini-games.
+These Terms of Service ("Terms") govern use of Hana ("Hana", "the Bot", "we", "us"), a Discord application providing conversational AI, server utilities, text-to-speech, roleplay, status updates, and optional mini-games. By inviting Hana to a server, using a command, or chatting in an enabled RoomAI channel, you agree to these Terms and the [Privacy Policy](PRIVACY_POLICY.md).
 
-## 1. Acceptance
+## 1. Eligibility and server responsibility
 
-By inviting Hana to a server, running a Hana command, or otherwise using the Bot, you agree to these Terms and the [Privacy Policy](PRIVACY_POLICY.md). If you do not agree, do not use the Bot and remove it from your server.
+You must be old enough to use Discord under the rules and laws that apply to you, and must comply with Discord's Terms, Community Guidelines, and applicable law. Server administrators are responsible for enabling Hana only in channels and communities where they have permission to do so.
 
-## 2. Eligibility and Discord rules
+Hana may leave a newly joined server that does not meet its published minimum-member requirement. Features, availability, quotas, and Premium access may change as the service evolves.
 
-You must be old enough to use Discord under the laws that apply to you and must comply with Discord's Terms of Service, Community Guidelines, and all applicable laws. Server administrators are responsible for configuring the Bot only in channels and servers where they have permission to do so.
+## 2. What Hana provides
 
-## 3. What Hana provides
+Hana may provide AI chat in channels explicitly enabled by an administrator, optional conversation memory, status updates, text-to-speech in an administrator-selected voice channel, roleplay interactions, weather-aware life status, and optional mini-games.
 
-Hana may provide AI chat in channels specifically enabled by a server administrator, optional conversation memory, Discord status updates, text-to-speech in a voice channel chosen by a server administrator, roleplay interactions, and optional mini-games. The Bot is not a public release and may be installed only in servers authorized by its operator. Features may change, be unavailable, or be removed without notice.
+AI output is generated automatically and may be incorrect, incomplete, unavailable, or unsuitable for a particular situation. Do not rely on Hana for medical, legal, financial, safety-critical, emergency, or other professional advice.
 
-Hana's AI output is generated automatically. It can be incorrect, incomplete, inappropriate for a particular situation, or unavailable. Do not rely on Hana for medical, legal, financial, safety-critical, or other professional advice.
-
-## 4. Acceptable use
+## 3. Acceptable use
 
 You may not use Hana to:
 
-- violate law, Discord's rules, or another person's rights;
+- violate law, Discord rules, or another person's rights;
 - harass, threaten, impersonate, exploit, or deliberately harm others;
-- submit passwords, Discord tokens, payment information, or other highly sensitive personal information;
-- interfere with, reverse engineer, abuse, overload, or circumvent security controls of Hana, Discord, or its service providers; or
-- use the Bot's data or output to train models, profile people, or conduct spam or advertising.
+- submit passwords, Discord tokens, payment information, precise addresses, identity documents, health information, or other highly sensitive information;
+- interfere with, overload, reverse engineer, circumvent security controls of, or abuse Hana, Discord, or service providers; or
+- use the Bot's data or output to profile people, conduct spam, or run advertising without permission.
 
-You may not attempt to invite, copy, redistribute, reverse engineer, or make Hana available to an unauthorized server or user. The operator may remove Hana from an unauthorized server without notice.
+Do not invite, copy, redistribute, or make Hana available to an unauthorized server or user. We may limit, suspend, remove, or end access when reasonably necessary to protect users, the service, or compliance with these Terms.
 
-We may limit, suspend, or end access to Hana when reasonably necessary to protect users, the service, or compliance with these Terms.
+## 4. Content and third-party services
 
-## 5. Content and permissions
+You retain rights you have in the content you send. You grant the limited permission needed to receive, process, store, and transmit that content solely to operate the feature you choose, as described in the Privacy Policy.
 
-You retain any rights you have in content you send. You give us the limited permission necessary to receive, process, store, and transmit that content solely to operate the features you have used, as described in the Privacy Policy.
+Hana operates through Discord and may use Google Gemini for AI responses and Google text-to-speech services for audio. Those providers operate under their own terms and privacy practices. Hana is an independent third-party application and is not created, endorsed, or operated by Discord or Google.
 
-Please do not share information that you do not have permission to share. Server administrators should obtain any permissions required for their communities before enabling RoomAI or voice text-to-speech.
+## 5. Disclaimers and changes
 
-## 6. Third-party services
+Hana is provided "as is" and "as available." To the fullest extent permitted by law, we do not guarantee uninterrupted, secure, error-free, or suitable service, and are not liable for indirect, incidental, special, consequential, or punitive damages arising from use of, or inability to use, Hana.
 
-Hana operates through Discord and uses Google services for particular features: Google Gemini for AI-generated responses and Google Translate Text-to-Speech for audio generation. Their availability and terms may affect Hana. Hana is an independent third-party application and is not created, endorsed, or operated by Discord or Google.
+We may revise these Terms when the Bot or its requirements change. A revised version takes effect when published with an updated date. You may stop using Hana at any time by removing it from your server or stopping use of its features.
 
-## 7. Disclaimers and limitation of liability
+## 6. Contact
 
-Hana is provided "as is" and "as available." To the fullest extent permitted by law, we do not guarantee uninterrupted, secure, error-free, or suitable service. To the fullest extent permitted by law, we are not liable for indirect, incidental, special, consequential, or punitive damages arising from use of, or inability to use, Hana.
+For support, Premium, questions about these Terms, or a data request, contact Hana through the official Discord community:
 
-## 8. Changes and termination
-
-We may update these Terms when the Bot or legal requirements change. The revised version takes effect when published with a new update date. You may stop using Hana at any time by removing it from your server. Instructions for requesting deletion of stored data are in the Privacy Policy.
-
-## 9. Contact
-
-For support, a question about these Terms, or a data request, contact the operator at **wati23rt@gmail.com**.
+https://discord.gg/qWbQEABAPA
