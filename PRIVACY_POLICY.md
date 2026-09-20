@@ -36,7 +36,7 @@ Depending on the feature you use, Hana may process the following.
 - Anonymous relay cooldown data: sender ID, guild ID, and next eligible time. The relay message itself is delivered to the recipient via Discord; it is not stored in the cooldown record.
 - Temporary relay metadata (target user ID, guild ID, expiry, and delivery state) for up to seven days where needed to operate a relay feature.
 - Action GIF cache entries (action category, GIF URL, and cache metadata). This cache does not need your message content and is retained for up to 30 days.
-- When you explicitly request a photo of Hana's current verified travel status, Hana may request a fresh stock image from Pexels using only a fixed Japan location query that matches that status. Hana does not send your Discord message, identity, or location to Pexels, and does not cache these photo results.
+- When you explicitly request a photo of Hana's current verified travel status, Hana may request a fresh stock image from Pexels using only a fixed Japan location query that matches that status. Hana attaches a result only when its supplied description matches the approved Japan place; otherwise no image is attached. Hana does not send your Discord message, identity, or location to Pexels, and does not cache these photo results.
 - Text submitted to `/tts` while Hana is connected to a voice channel. Hana synthesises that text; it does not record, transcribe, or store other people’s voice audio.
 
 ### Information Hana does not collect for a feature
