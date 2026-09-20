@@ -37,6 +37,7 @@ Depending on the feature you use, Hana may process the following.
 - Anonymous relay cooldown data: sender ID, guild ID, and next eligible time. The relay message itself is delivered to the recipient via Discord; it is not stored in the cooldown record.
 - Temporary relay metadata (target user ID, guild ID, expiry, and delivery state) for up to seven days where needed to operate a relay feature.
 - Action GIF cache entries (action category, GIF URL, and cache metadata). This cache does not need your message content and is retained for up to 30 days.
+- Japan public-holiday dates returned by Nager.Date for the fixed country code `JP`, cached by year to add limited holiday context to Hana's global schedule. No Discord user, server, message, location, or device information is sent to Nager.Date.
 - When you explicitly ask RoomAI about Hana's current verified travel status or use `/travelphoto <Japan prefecture>`, Hana may request a fresh stock image from Pexels using only a fixed Japan location query. RoomAI uses the current verified Hana location and attaches an image only when its supplied description matches the approved Japan place. `/travelphoto` randomly selects from a curated landmark list for the prefecture requested; where Pexels omits enough metadata to verify the exact landmark, Hana may attach a clearly labelled visual reference from that landmark search rather than claim it depicts the exact place. Hana does not send your Discord message, identity, or location to Pexels, and does not cache these photo results.
 - Text submitted to `/tts` while Hana is connected to a voice channel. Hana synthesises that text; it does not record, transcribe, or store other people’s voice audio.
 
@@ -66,6 +67,7 @@ Hana uses the following providers only when the relevant feature needs them:
 | [Google Gemini](https://policies.google.com/privacy) | RoomAI response generation, conversation-memory summaries, and optional drawing-game prompt generation | Relevant RoomAI message/context, Hana context, applicable memory, and character/status context needed for the response or summary; drawing prompts use Hana’s theme/status context only |
 | [Google Translate TTS](https://policies.google.com/privacy) | Speech synthesis for `/tts` | The text selected for speech and language setting |
 | [Open-Meteo](https://open-meteo.com/en/terms) | Public Sapporo weather used by Hana's life/status context | Fixed Sapporo forecast parameters; no Discord user content or device location |
+| [Nager.Date](https://github.com/nager/Nager.Date) | Japan public-holiday dates used by Hana's global schedule | Fixed year and country code `JP` only; no Discord user, message, server, or location data |
 | [Nekos.best](https://nekos.best/) | Anime GIFs for `/act` and `/actwith` | Requested action category only; no conversation message content |
 | [Pexels](https://www.pexels.com/api/documentation/) | Fresh travel-scene image for a verified Hana travel-status question in RoomAI or `/travelphoto <Japan prefecture>` | A fixed status-matched Japan query or curated Japan landmark query only; no Discord user content, identity, or device location |
 
