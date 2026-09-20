@@ -48,6 +48,8 @@ Hana depends on Discord and may use Google Gemini for AI generation and memory s
 
 Hana is provided on an "as available" basis. Interruptions can occur because of Discord, network, API-provider, hosting, maintenance, rate limits, or bugs. We may add, remove, restrict, suspend, or change features, quotas, eligibility criteria, and entitlements when reasonably necessary for operation, safety, or development.
 
+Where reasonably necessary to investigate a reported outage, security concern, misuse, or support request, Hana's configured operator may join a server where Hana is installed through an existing invite, vanity URL, or an invite Hana can create only with the permissions granted to it. The operator may access only channels that the server's Discord permissions allow and may use that access only for the operational purpose. This does not give the operator automatic access to a server or any channel.
+
 We may suspend or remove access where we reasonably believe these Terms, Discord rules, security controls, or applicable law have been violated.
 
 ## 7. Disclaimers and limitation of liability
