@@ -25,7 +25,7 @@ Depending on the feature you use, Hana may process the following.
 
 ### Conversation, memory, and relationship information
 
-- Messages sent in an enabled RoomAI channel, Hana's replies, and the current RoomAI context needed to generate a response.
+- Messages sent in an enabled RoomAI channel, Hana's replies, and the current RoomAI context needed to generate a response. The optional AI drawing-game prompt uses Hana's own current theme/status context, not the player’s RoomAI conversation or profile.
 - If memory is enabled for that server, Hana stores a compact summary, communication preferences, topic memories, explicitly requested important memories, and unsummarised conversation lines until they can be summarised. Important memories are limited to 12 items per user per server.
 - A per-user, per-server relationship record: a score and level, limited communication/boundary status, counts of repeated romance requests, activity timestamps, language preference, and a short non-sensitive callback topic. It is designed not to store raw sensitive conversation text.
 - A legacy-memory archive where an older record has no known source server. Hana does not inject this archive into AI prompts unless its owner explicitly moves it through `/settingai`.
@@ -63,7 +63,7 @@ Hana uses the following providers only when the relevant feature needs them:
 | Provider | Purpose | Information involved |
 | --- | --- | --- |
 | [Discord](https://discord.com/privacy) | Platform, messages, commands, direct messages, and voice connection | Information you send or make available through Discord and the metadata needed by Discord to deliver it |
-| [Google Gemini](https://policies.google.com/privacy) | RoomAI response generation and conversation-memory summaries | Relevant RoomAI message/context, Hana context, applicable memory, and character/status context needed for the response or summary |
+| [Google Gemini](https://policies.google.com/privacy) | RoomAI response generation, conversation-memory summaries, and optional drawing-game prompt generation | Relevant RoomAI message/context, Hana context, applicable memory, and character/status context needed for the response or summary; drawing prompts use Hana’s theme/status context only |
 | [Google Translate TTS](https://policies.google.com/privacy) | Speech synthesis for `/tts` | The text selected for speech and language setting |
 | [Open-Meteo](https://open-meteo.com/en/terms) | Public Sapporo weather used by Hana's life/status context | Fixed Sapporo forecast parameters; no Discord user content or device location |
 | [Nekos.best](https://nekos.best/) | Anime GIFs for `/act` and `/actwith` | Requested action category only; no conversation message content |
