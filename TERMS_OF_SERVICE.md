@@ -6,7 +6,7 @@ These Terms of Service ("Terms") govern your use of Hana, a Discord application 
 
 ## 1. What Hana provides
 
-Hana is a conversational Discord bot. Features may include RoomAI chat, personal memory controls, status and weather context, guidebooks, minigames, text-to-speech (TTS), anonymous direct-message relay, action GIF commands, and server-management utilities.
+Hana is a conversational Discord bot. Features may include RoomAI chat, personal memory controls, status and weather context, guidebooks, minigames, text-to-speech (TTS), anonymous direct-message relay, action GIF commands, and server-management utilities. An operator-only direct-message command may obtain an available invite link for a server where Hana is already installed, or create one only when Hana has the required Discord permission.
 
 Some features are available only in an enabled RoomAI channel, require administrator permission, have usage limits, or are available only to servers with an applicable entitlement. Features, limits, and availability may change as Hana develops.
 
