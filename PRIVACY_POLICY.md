@@ -36,6 +36,7 @@ Depending on the feature you use, Hana may process the following.
 - Anonymous relay cooldown data: sender ID, guild ID, and next eligible time. The relay message itself is delivered to the recipient via Discord; it is not stored in the cooldown record.
 - Temporary relay metadata (target user ID, guild ID, expiry, and delivery state) for up to seven days where needed to operate a relay feature.
 - Action GIF cache entries (action category, GIF URL, and cache metadata). This cache does not need your message content and is retained for up to 30 days.
+- When you explicitly request a photo of Hana's current verified travel status, Hana may request a fresh stock image from Pexels using only a fixed Japan location query that matches that status. Hana does not send your Discord message, identity, or location to Pexels, and does not cache these photo results.
 - Text submitted to `/tts` while Hana is connected to a voice channel. Hana synthesises that text; it does not record, transcribe, or store other people’s voice audio.
 
 ### Information Hana does not collect for a feature
@@ -65,6 +66,7 @@ Hana uses the following providers only when the relevant feature needs them:
 | [Google Translate TTS](https://policies.google.com/privacy) | Speech synthesis for `/tts` | The text selected for speech and language setting |
 | [Open-Meteo](https://open-meteo.com/en/terms) | Public Sapporo weather used by Hana's life/status context | Fixed Sapporo forecast parameters; no Discord user content or device location |
 | [Nekos.best](https://nekos.best/) | Anime GIFs for `/act` and `/actwith` | Requested action category only; no conversation message content |
+| [Pexels](https://www.pexels.com/api/documentation/) | Fresh travel-scene image when a user asks for Hana's current verified Japan travel status | A fixed, status-matched Japan location query only; no Discord user content, identity, or device location |
 
 If you enable cross-server sharing, Hana may include eligible memory from up to three of your other servers in the prompt for your current server. This happens only while sharing is enabled and only for your own records; Hana does not provide other members' memory to Gemini.
 

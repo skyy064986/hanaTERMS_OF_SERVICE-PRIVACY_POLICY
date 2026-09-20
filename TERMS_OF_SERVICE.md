@@ -42,7 +42,7 @@ Do not submit content that you do not have permission to share. A message you ch
 
 ## 5. Third-party services
 
-Hana depends on Discord and may use Google Gemini for AI generation and memory summarisation, Google Translate TTS for speech synthesis, Open-Meteo for public Sapporo weather data, and Nekos.best for anime action GIFs. Their availability, terms, and privacy practices apply separately. We do not control their services or guarantee that they will always be available.
+Hana depends on Discord and may use Google Gemini for AI generation and memory summarisation, Google Translate TTS for speech synthesis, Open-Meteo for public Sapporo weather data, Nekos.best for anime action GIFs, and Pexels for fresh stock travel-scene images requested for Hana's verified current Japan travel status. Their availability, terms, and privacy practices apply separately. We do not control their services or guarantee that they will always be available.
 
 ## 6. Availability, limits, and changes
 
