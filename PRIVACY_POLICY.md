@@ -1,55 +1,103 @@
 # Hana Bot Privacy Policy
 
-**Last updated:** 15 September 2026
+**Last updated: 20 September 2026**
 
-This Privacy Policy explains how Hana ("Hana", "the Bot", "we", "us") processes information when used on Discord. It applies to RoomAI, optional memory, text-to-speech, roleplay, status updates, and mini-games.
+This Privacy Policy explains how Hana ("Hana", "we", "us") handles information when you use the Hana Discord bot. It covers Hana's own processing; Discord and each third-party provider have their own policies.
 
-## 1. Information Hana processes
+## 1. Privacy by default
 
-Hana processes information needed to provide its features:
+Hana normally keeps conversational memory separate by **Discord User ID + Guild (server) ID**. It does not use one server's memory in another server unless the owner of that memory enables cross-server sharing in `/settingai`.
 
-- **Discord identifiers and context:** Discord user ID, display name/username, server ID, channel ID, and interaction data needed to respond to commands.
-- **RoomAI messages:** message content and sender display name only in a channel where an administrator enabled RoomAI.
-- **Conversation context and memory:** recent conversation context for the current speaker; optional summary, relationship profile, and pinned preferences/facts for that speaker. Memory is separated by Discord user ID and server ID by default.
-- **Settings and usage data:** optional reply-mention preference, an optional user-selected timezone, privacy choices, and daily AI request counters. Counters contain an identifier, JST date, and count.
-- **Voluntary personal profile:** a user may optionally enter a nickname/pseudonym, age, important dates, or basic context through `/settingai`. Hana does not infer age, identity, address, or private facts from an avatar, name, language, or Discord profile.
-- **Mini-game and voice input:** temporary mini-game state and text used for optional text-to-speech in an active Bot voice/stage channel.
+Hana does not infer personal facts such as your age, identity, location, or relationship status. If you did not provide a fact yourself, Hana should treat it as unknown. Please do not enter highly sensitive data such as passwords, bank details, home addresses, phone numbers, government identifiers, health records, or private information about other people.
 
-## 2. Information you should not submit
+## 2. Information Hana processes and stores
 
-Do not submit your address, phone number, email address, password, Discord token, API token, banking or payment details, identity documents, precise location, health information, or similar sensitive information. Use a nickname or pseudonym and basic non-sensitive context only.
+Depending on the feature you use, Hana may process the following.
 
-## 3. How information is used and shared
+### Discord and server information
 
-We use information to answer messages and commands, maintain optional conversation continuity, generate AI responses and spoken audio, run mini-games, enforce limits, troubleshoot errors, and maintain the Bot. We do not sell personal information, run targeted advertising, or use Discord API data to profile users or their relationships.
+- Discord user, message, channel, and guild IDs; display names; and command or interaction metadata needed to answer a command, apply permissions, or enforce limits.
+- Enabled RoomAI channel IDs, guild and channel names, enabled status, and recent RoomAI conversation context. Recent context is limited to the latest 16 messages before older context is discarded.
+- A short link between an original RoomAI message and Hana's reply (message IDs, channel ID, reply ID, and timestamp) so Hana can remove its reply if the original message is deleted. These links expire after seven days.
+- For guild admission and operational auditing: guild ID and name, owner ID and display name, total and human-member counts, minimum-membership check result, and an available invite or vanity URL. Hana may send this admission report to its configured operator.
+- Server context and templates that an authorised server administrator deliberately saves for Hana to use. Administrators should not place personal or sensitive information in these fields.
 
-Information is shared only as needed for the selected feature:
+### Conversation, memory, and relationship information
 
-- **Discord** transmits messages and interactions through its platform.
-- **Google Gemini** may receive the applicable message, current-speaker context, and only relevant memory/settings enabled by that speaker to generate a response or memory summary.
-- **Google text-to-speech services** may receive text submitted for optional audio generation.
+- Messages sent in an enabled RoomAI channel, Hana's replies, and the current RoomAI context needed to generate a response.
+- If memory is enabled for that server, Hana stores a compact summary, communication preferences, topic memories, explicitly requested important memories, and unsummarised conversation lines until they can be summarised. Important memories are limited to 12 items per user per server.
+- A per-user, per-server relationship record: a score and level, limited communication/boundary status, counts of repeated romance requests, activity timestamps, language preference, and a short non-sensitive callback topic. It is designed not to store raw sensitive conversation text.
+- A legacy-memory archive where an older record has no known source server. Hana does not inject this archive into AI prompts unless its owner explicitly moves it through `/settingai`.
+- Your `/settingai` choices, such as reply mention preference, local-memory preference, cross-server memory sharing, proactive greeting preference, time zone, and the optional profile fields you voluntarily enter (name, age, dates, and about text).
 
-These providers process information under their own terms and privacy practices.
+### Usage, relay, action, and voice information
 
-## 4. Memory boundaries and retention
+- Per-user and per-guild AI request counts and date for cooldown and quota enforcement. Usage records are pruned after 14 days.
+- Anonymous relay cooldown data: sender ID, guild ID, and next eligible time. The relay message itself is delivered to the recipient via Discord; it is not stored in the cooldown record.
+- Temporary relay metadata (target user ID, guild ID, expiry, and delivery state) for up to seven days where needed to operate a relay feature.
+- Action GIF cache entries (action category, GIF URL, and cache metadata). This cache does not need your message content and is retained for up to 30 days.
+- Text submitted to `/tts` while Hana is connected to a voice channel. Hana synthesises that text; it does not record, transcribe, or store other people’s voice audio.
 
-- Personal memory is isolated by Discord user ID and server ID. Hana does not use one member's private memory to answer another member.
-- Cross-server memory is off by default. If its owner explicitly enables it in `/settingai`, Hana may read only that same user's sanitized summaries from other servers where memory remains enabled; records are not merged.
-- Legacy memory whose original server is unknown is archived and not used in AI prompts unless its owner restores it.
-- Room context, mini-game sessions, relays, quotas, and other runtime records are retained only as reasonably needed to operate the feature, resolve issues, or until deleted where controls are available.
+### Information Hana does not collect for a feature
 
-## 5. Your controls
+Hana's global life schedule, character status, event state, and Sapporo weather context are not personalised user profiles. The weather request uses fixed public coordinates for Sapporo, Japan; it is not a request for your device location.
 
-`/settingai` is visible only to the caller. It lets users control local memory, cross-server sharing, reply mentions, timezone, voluntary personal profile, and deletion of memory/profile data. A user may also choose a memory record from an older server and move it to the current server after confirmation; the source record is deleted after a successful move. Deletion and move actions require confirmation. A server administrator can disable RoomAI or remove Hana from a server.
+## 3. How we use information
 
-## 6. Security and changes
+We use the information above to:
 
-We use reasonable administrative and technical measures intended to protect stored runtime data. No online system is completely secure; do not submit sensitive information to Hana.
+- Run RoomAI, commands, games, TTS, anonymous relay, action, status, and moderation/administration features.
+- Keep memory, relationship context, and replies scoped to the correct user and server.
+- Enforce consent controls, cooldowns, quotas, permissions, and abuse protections.
+- Restore enabled RoomAI rooms after a restart and operate the bot safely.
+- Diagnose service failures, prevent misuse, and improve reliability.
 
-We may revise this policy when features or requirements change. The current version shows its update date at the top.
+We do not sell personal information or use it for cross-context behavioural advertising.
 
-## 7. Contact
+## 4. When information is sent to third parties
 
-For privacy questions, Premium, support, or a data request, contact Hana through the official Discord community:
+Hana uses the following providers only when the relevant feature needs them:
 
-https://discord.gg/qWbQEABAPA
+| Provider | Purpose | Information involved |
+| --- | --- | --- |
+| [Discord](https://discord.com/privacy) | Platform, messages, commands, direct messages, and voice connection | Information you send or make available through Discord and the metadata needed by Discord to deliver it |
+| [Google Gemini](https://policies.google.com/privacy) | RoomAI response generation and conversation-memory summaries | Relevant RoomAI message/context, Hana context, applicable memory, and character/status context needed for the response or summary |
+| [Google Translate TTS](https://policies.google.com/privacy) | Speech synthesis for `/tts` | The text selected for speech and language setting |
+| [Open-Meteo](https://open-meteo.com/en/terms) | Public Sapporo weather used by Hana's life/status context | Fixed Sapporo forecast parameters; no Discord user content or device location |
+| [Nekos.best](https://nekos.best/) | Anime GIFs for `/act` and `/actwith` | Requested action category only; no conversation message content |
+
+If you enable cross-server sharing, Hana may include eligible memory from up to three of your other servers in the prompt for your current server. This happens only while sharing is enabled and only for your own records; Hana does not provide other members' memory to Gemini.
+
+## 5. Your choices and controls
+
+`/settingai` is an ephemeral panel: only the person opening it can see and change it. It lets you, where available:
+
+- Turn local memory on or off for the current server.
+- Turn cross-server memory sharing on or off.
+- View, move, or delete your local memory, all of your memory, and legacy memory. Moving memory requires a second confirmation and moves the matching relationship record with it.
+- View or edit your optional personal profile and settings.
+- Choose whether Hana mentions you in replies, allows proactive greetings, and uses your selected time zone.
+
+You can also remove a message in Discord, remove Hana from a server, or ask the team through the official support server for help with information not covered by an in-bot control. Server administrators can disable RoomAI for a room and manage server context they created.
+
+Deleting local memory also deletes the matching local relationship record. Deleting all memory deletes all of that user's relationship records and legacy archive. Some operational records may remain briefly in backups or logs while they age out.
+
+## 6. Retention
+
+Hana keeps information only as long as needed for the active feature or until it is removed through the available controls, except where a short operational retention period is needed. Examples: RoomAI reply links and relay metadata expire after seven days, AI usage records are pruned after 14 days, and action GIF cache entries expire after 30 days.
+
+Memory, settings, relationship records, RoomAI configuration, and administrator-provided context may remain until the relevant user, administrator, or Hana team deletes them. Legacy memory is archived and not used by AI until its owner explicitly restores or moves it.
+
+## 7. Security
+
+We use scoped storage, permission checks, ephemeral settings panels, and feature-specific limits to reduce unnecessary access. No system can guarantee absolute security. Keep Discord account security enabled and avoid submitting sensitive information to any bot or AI service.
+
+## 8. Children
+
+Hana is not directed to people below the minimum age permitted to use Discord in their country. If you believe a child has provided personal information to Hana improperly, contact us so we can review the request.
+
+## 9. Changes and contact
+
+We may update this Policy as Hana changes. The latest version and date will be published in this repository.
+
+For privacy requests, questions, or reports, contact the Hana team through the official Discord server: <https://discord.gg/qWbQEABAPA>.
