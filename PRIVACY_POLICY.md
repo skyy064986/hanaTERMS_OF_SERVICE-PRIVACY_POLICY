@@ -32,12 +32,13 @@ Depending on the feature you use, Hana may process the following.
 - A legacy-memory archive where an older record has no known source server. Hana does not inject this archive into AI prompts unless its owner explicitly moves it through `/settingai`.
 - Your `/settingai` choices, such as reply mention preference, local-memory preference, cross-server memory sharing, proactive greeting preference, time zone, and the optional profile fields you voluntarily enter (name, age, dates, and about text).
 
-### Usage, relay, action, and voice information
+### Usage, RoomAI relay, administrator messaging, action, and voice information
 
 - Per-user and per-guild AI request counts and date for cooldown and quota enforcement. Usage records are pruned after 14 days.
-- Anonymous relay cooldown data: sender ID, guild ID, and next eligible time. The relay message itself is delivered to the recipient via Discord; it is not stored in the cooldown record.
-- Temporary relay metadata (target user ID, guild ID, expiry, and delivery state) for up to seven days where needed to operate a relay feature.
-- Action GIF cache entries (action category, GIF URL, and cache metadata). This cache does not need your message content and is retained for up to 30 days.
+- Hana does **not** provide an anonymous `/dm` command. That command and its cooldown storage have been removed.
+- If a user explicitly asks Hana in an enabled RoomAI server channel to tell another member something, Hana may temporarily store a named RoomAI relay. The record contains the guild ID, target user ID and display name, sender user ID and display name, relay type, the requested message text (up to 300 characters where present), and creation and expiry times. Hana identifies the sender when delivering the relay in RoomAI; it is not an anonymous direct message. The record is deleted after delivery or expires after seven days.
+- `/dmpanel` lets an authorised server administrator send administrator-written direct messages to selected members or a selected role. Hana processes the selected recipient IDs and message long enough to perform that request. Hana does not add the message to RoomAI memory or the named-relay store. Discord may retain delivered direct messages under its own policies. Server administrators are responsible for using this feature lawfully and without spam or harassment.
+- `/act` and `/actwith` request a fresh GIF from the configured image provider for each use. Hana does not maintain an action-GIF cache.
 - Japan public-holiday dates returned by Nager.Date for the fixed country code `JP`, cached by year to add limited holiday context to Hana's global schedule. No Discord user, server, message, location, or device information is sent to Nager.Date.
 - When you explicitly ask RoomAI about Hana's current verified travel status or use `/travelphoto <Japan prefecture>`, Hana may request a fresh stock image from Pexels using only a fixed Japan location query. RoomAI uses the current verified Hana location and attaches an image only when its supplied description matches the approved Japan place. `/travelphoto` randomly selects from a curated landmark list for the prefecture requested; where Pexels omits enough metadata to verify the exact landmark, Hana may attach a clearly labelled visual reference from that landmark search rather than claim it depicts the exact place. Hana does not send your Discord message, identity, or location to Pexels, and does not cache these photo results.
 - Text submitted to `/tts` while Hana is connected to a voice channel. Hana synthesises that text; it does not record, transcribe, or store other people’s voice audio.
@@ -50,7 +51,7 @@ Hana's global life schedule, character status, event state, and Sapporo weather 
 
 We use the information above to:
 
-- Run RoomAI, commands, games, TTS, anonymous relay, action, status, and moderation/administration features.
+- Run RoomAI, commands, games, TTS, named RoomAI relays, administrator messaging, action, status, and moderation/administration features.
 - Keep memory, relationship context, and replies scoped to the correct user and server.
 - Enforce consent controls, cooldowns, quotas, permissions, and abuse protections.
 - Restore enabled RoomAI rooms after a restart and operate the bot safely.
@@ -90,7 +91,7 @@ Deleting local memory also deletes the matching local relationship record. Delet
 
 ## 6. Retention
 
-Hana keeps information only as long as needed for the active feature or until it is removed through the available controls, except where a short operational retention period is needed. Examples: RoomAI reply links and relay metadata expire after seven days, AI usage records are pruned after 14 days, and action GIF cache entries expire after 30 days.
+Hana keeps information only as long as needed for the active feature or until it is removed through the available controls, except where a short operational retention period is needed. Examples: RoomAI reply links expire after seven days, named RoomAI relay records are deleted after delivery or expire after seven days, and AI usage records are pruned after 14 days. Hana does not retain an action-GIF cache or anonymous `/dm` cooldown records.
 
 Memory, settings, relationship records, RoomAI configuration, and administrator-provided context may remain until the relevant user, administrator, or Hana team deletes them. Legacy memory is archived and not used by AI until its owner explicitly restores or moves it.
 

@@ -6,7 +6,7 @@ These Terms of Service ("Terms") govern your use of Hana, a Discord application 
 
 ## 1. What Hana provides
 
-Hana is a conversational Discord bot. Features may include RoomAI chat, personal memory controls, status and weather context, guidebooks, minigames, text-to-speech (TTS), anonymous direct-message relay, action GIF commands, and server-management utilities. An operator-only direct-message command may obtain an available invite link for a server where Hana is already installed, or create one only when Hana has the required Discord permission.
+Hana is a conversational Discord bot. Features may include RoomAI chat, personal memory controls, status and weather context, guidebooks, minigames, text-to-speech (TTS), named RoomAI message relays, administrator messaging, action GIF commands, and server-management utilities. Hana does not provide an anonymous `/dm` command. An operator-only direct-message command may obtain an available invite link for a server where Hana is already installed, or create one only when Hana has the required Discord permission.
 
 Some features are available only in an enabled RoomAI channel, require administrator permission, have usage limits, or are available only to servers with an applicable entitlement. Hana requires at least 25 non-bot members when it is added to a server and automatically leaves if the verified non-bot member count is below that threshold. Features, limits, eligibility criteria, and availability may change as Hana develops.
 
@@ -24,7 +24,7 @@ Do not use Hana to:
 
 - Break the law or infringe another person's rights.
 - Harass, threaten, stalk, shame, exploit, or discriminate against anyone.
-- Send spam, unwanted bulk messages, or misuse `/dm`, TTS, actions, or any other feature to disturb others.
+- Send spam, unwanted bulk messages, or misuse `/dmpanel`, RoomAI relays, TTS, actions, or any other feature to disturb others.
 - Upload, request, or distribute malware, scams, credentials, payment data, addresses, private contact details, or other highly sensitive information.
 - Evade quotas, access controls, consent controls, server permissions, or platform restrictions.
 - Misrepresent Hana as a human, official emergency resource, or provider of professional advice.
@@ -36,9 +36,9 @@ Action commands and relayed messages must be used respectfully. Where Hana asks 
 
 AI responses can be incomplete, inaccurate, inappropriate for your situation, or unavailable. Check important information independently. Do not rely on Hana for medical, legal, financial, safety, academic, or crisis decisions.
 
-You retain rights you have in content you submit. You grant Hana the limited permission needed to receive, process, store, and display that content solely to operate the feature you asked for—for example, answering a RoomAI message, creating TTS audio, delivering an anonymous relay, or generating a conversation summary.
+You retain rights you have in content you submit. You grant Hana the limited permission needed to receive, process, store, and display that content solely to operate the feature you asked for—for example, answering a RoomAI message, creating TTS audio, delivering a named RoomAI relay, sending an administrator-authored message through `/dmpanel`, or generating a conversation summary.
 
-Do not submit content that you do not have permission to share. A message you choose to relay anonymously will still be delivered to the selected recipient through Discord; anonymity does not make harmful or unlawful content acceptable.
+Do not submit content that you do not have permission to share. A RoomAI relay shows the sender's display name to the target and is delivered only within the same server's RoomAI flow; it is not anonymous. Administrators using `/dmpanel` are responsible for selecting appropriate recipients and must not use it for spam, harassment, deceptive messaging, or unwanted bulk contact.
 
 ## 5. Third-party services
 
