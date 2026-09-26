@@ -1,6 +1,6 @@
 # Hana Bot Terms of Service
 
-**Last updated: 20 September 2026**
+**Last updated: 26 September 2026**
 
 These Terms of Service ("Terms") govern your use of Hana, a Discord application operated by the Hana team ("Hana", "we", "us", or "our"). By installing Hana in a server or using its commands, you agree to these Terms and the [Privacy Policy](PRIVACY_POLICY.md).
 
@@ -8,7 +8,7 @@ These Terms of Service ("Terms") govern your use of Hana, a Discord application 
 
 Hana is a conversational Discord bot. Features may include RoomAI chat, personal memory controls, status and weather context, guidebooks, minigames, text-to-speech (TTS), anonymous direct-message relay, action GIF commands, and server-management utilities. An operator-only direct-message command may obtain an available invite link for a server where Hana is already installed, or create one only when Hana has the required Discord permission.
 
-Some features are available only in an enabled RoomAI channel, require administrator permission, have usage limits, or are available only to servers with an applicable entitlement. Features, limits, and availability may change as Hana develops.
+Some features are available only in an enabled RoomAI channel, require administrator permission, have usage limits, or are available only to servers with an applicable entitlement. Hana requires at least 25 non-bot members when it is added to a server and automatically leaves if the verified non-bot member count is below that threshold. Features, limits, eligibility criteria, and availability may change as Hana develops.
 
 Hana is a fictional conversational character. It is not a person, therapist, emergency service, legal professional, doctor, financial adviser, or substitute for professional advice.
 
@@ -48,7 +48,7 @@ Hana depends on Discord and may use Google Gemini for AI generation and memory s
 
 Hana is provided on an "as available" basis. Interruptions can occur because of Discord, network, API-provider, hosting, maintenance, rate limits, or bugs. We may add, remove, restrict, suspend, or change features, quotas, eligibility criteria, and entitlements when reasonably necessary for operation, safety, or development.
 
-Where reasonably necessary to investigate a reported outage, security concern, misuse, or support request, Hana's configured operator may use a private DM-only operational command to inspect the names and types of channels that Hana itself can view in a server, or may join a server where Hana is installed through an existing invite, vanity URL, or an invite Hana can create only with the permissions granted to it. The operator may access only channels that the server's Discord permissions allow and may use that access only for the operational purpose. This does not give the operator automatic access to a server or any channel.
+Hana does not automatically fetch or retain a server invite when it joins. Where reasonably necessary to investigate a reported outage, security concern, misuse, or support request, Hana's configured operator may use a private DM-only operational command to inspect the names and types of channels that Hana itself can view in a server, or explicitly request an invite for a server where Hana is installed. Only that on-demand request may fetch an existing invite, vanity URL, or create an invite with the permissions granted to Hana. The operator may access only channels that the server's Discord permissions allow and may use that access only for the operational purpose. This does not give the operator automatic access to a server or any channel.
 
 We may suspend or remove access where we reasonably believe these Terms, Discord rules, security controls, or applicable law have been violated.
 
